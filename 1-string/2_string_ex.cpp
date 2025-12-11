@@ -9,8 +9,15 @@ using namespace std;
 */
 void lunghezzaStringa(string stringa){
 
-    cout << "Da implementare" << endl;
+ int z = stringa.find("ciao");
+    cout << "Stringa trovata all'indice: " << z << endl;
+    cout << endl;
+    if(z<0){
 
+        cout<<"La parola ciao NON è presente"<<endl;
+
+    }
+    else cout<<" parola ciao è presente"<<endl;
 }
 
 /*
@@ -21,8 +28,11 @@ void lunghezzaStringa(string stringa){
 */
 void trovaCiao(string stringa){
 
-    cout << "Da implementare" << endl;
-    
+    cout << "Stringa prima di replace: " << stringa << endl;
+
+    stringa.replace(16, stringa.length(), "pasta");
+    cout << "Stringa dopo replace: " << stringa << endl;
+    cout<< endl;
 }
 
 
@@ -31,9 +41,11 @@ void trovaCiao(string stringa){
     TODO: sostituire la parola "pizza" con la parola "pasta" e stampare la nuova stringa
 */
 void sostituisciPizzaConPasta(string stringa){
-    
-    cout << "Da implementare" << endl;
-    
+  string s = stringa.substr(0, 6);
+    cout << "Nuova stringa estratta (da indice 0 a indice 5): " << s << endl;
+    cout << endl;
+
+
 }
 
 
@@ -46,8 +58,13 @@ void sostituisciPizzaConPasta(string stringa){
 void stampaPrimaParola(string stringa){
     // TODO
 
-    cout << "Da implementare" << endl;
-    
+    cout << "Stringa prima di insert: " << stringa << endl;
+
+    stringa.insert(stringa.length(), " testo");
+    cout << "Stringa dopo insert: " << stringa << endl;
+    cout<< endl;
+
+
 }
 
 
@@ -58,7 +75,7 @@ void stampaPrimaParola(string stringa){
 void aggiungiGiovanni(string frase){
 
     cout << "Da implementare" << endl;
-    
+
 }
 
 int main()
@@ -71,12 +88,16 @@ int main()
 
 
     lunghezzaStringa(str);
-    //trovaCiao(str);
-    //sostituisciPizzaConPasta(str);
-    //stampaPrimaParola(str);
-    //aggiungiGiovanni(str);
-    
+    trovaCiao(str);
+    sostituisciPizzaConPasta(str);
+    stampaPrimaParola(str);
+    aggiungiGiovanni(str);
+
 
 
     return 0;
 }
+
+    
+
+
