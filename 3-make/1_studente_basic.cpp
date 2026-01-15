@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 /***************************************************************************
@@ -14,14 +13,25 @@ public:
 
     void stampaStudente(){
         cout << "Nome: " << nome << ", eta: " << eta << ", media: " << media << endl;
+
     }
 };
 
 int main()
 {
     /*********************** Creazione di oggetti ******************************/
-    // TODO Creare un nuovo studente "Mario" con eta 17 e media 7
-    // TODO Creare un nuovo studente "Maria"  (questa volta con un puntatore) con eta 18 e media 8
+Studente m;
+m.nome="Mario";
+m.eta=17;
+m.media=7;
+
+Studente s2;
+Studente *p=&s2;
+p->nome="Maria";
+p->eta=18;
+p->media=8;
+m.stampaStudente();
+p->stampaStudente();
 
 
     /************************** Visualizzazione ********************************/
