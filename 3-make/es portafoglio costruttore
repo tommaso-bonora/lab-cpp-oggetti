@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+class Portafoglio{
+
+    private:
+        float valore;
+
+    public:
+
+        Portafoglio(){
+            valore=3.00;
+        }
+
+        Portafoglio(float a){
+            valore=a;
+        }
+
+        float agg(float b,char se){
+            if (se=='+'){
+                valore+=b;
+            } else if (se=='+'){
+                valore+=b;
+            }
+            return valore;
+        }
+};
+int main()
+{
+ float valore1;char segno;float valore2;
+
+    cout <<"dimmi quanti soldi hai"<< endl;
+   cin>>valore1;
+
+   Portafoglio p(valore1);
+
+   cout<<"dimmi a"<<endl;
+   cin>>valore2;
+   cout<<"dimmi il segno"<<endl;
+   cin>>segno;
+   cout<<"il totale e'"<<p.agg(valore2,segno)<<endl;
+    return 0;
+}
